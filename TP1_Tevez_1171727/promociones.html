@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Promociones - Local Nova</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="codigo.js"></script>
+    <script src="promociones.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">
+          <img src="assets/img/logo.svg" alt="Logo de Local Nova" width="36" height="36" />
+          <span>Local Nova</span>
+        </a>
+        <nav>
+          <ul class="nav">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="promociones.html" class="active">Promociones</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section hero">
+        <div class="container hero-inner">
+          <div class="hero-text">
+            <h1>Promociones vigentes</h1>
+            <p>Aprovecha los descuentos combinados y calcula tu ahorro antes de venir al local o comprar online.</p>
+            <ul>
+              <li>Lleva 2 productos y obtene 50% en el segundo.</li>
+              <li>3x2 en productos seleccionados.</li>
+              <li>10% de descuento por compras superiores a $30.000.</li>
+            </ul>
+          </div>
+          <div class="hero-img">
+            <img src="assets/img/logo.svg" alt="Logo Local Nova" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2>Calculadora de descuentos</h2>
+          <p>Agrega productos, indica cantidades y mira como se aplican las promos. El sistema calcula el mejor beneficio por producto y el extra del 10% si corresponde.</p>
+          <p class="nota">Participan del 3x2: Mochila urbana, Botella termica y Mate de acero. El 50% se aplica sobre la segunda unidad en compras de a pares.</p>
+          <div class="split">
+            <form id="promo-form" class="card">
+              <div class="form-row">
+                <label for="producto">Producto</label>
+                <select id="producto" name="producto" required>
+                  <option value="">Elegir producto</option>
+                  <option value="mochila">Mochila urbana - $45.200</option>
+                  <option value="botella">Botella termica - $24.800</option>
+                  <option value="gorra">Gorra clasica - $12.500</option>
+                  <option value="agenda">Agenda 2025 - $15.900</option>
+                  <option value="personalizacion">Personalizacion - $8.000</option>
+                  <option value="mate">Mate de acero - $18.700</option>
+                </select>
+              </div>
+              <div class="form-row">
+                <label for="cantidad">Cantidad</label>
+                <input id="cantidad" type="number" name="cantidad" min="1" value="1" required />
+              </div>
+              <button class="btn" type="submit">Agregar</button>
+            </form>
+
+            <div class="card" id="items-seleccionados">
+              <h3>Productos elegidos</h3>
+              <div id="lista-items">
+                <p>No agregaste productos todavia.</p>
+              </div>
+              <button class="btn" id="limpiar-lista" type="button">Limpiar lista</button>
+            </div>
+          </div>
+
+          <div class="card resultados">
+            <h3>Resultados</h3>
+            <p>Total sin descuento: <strong id="total-sin">$0</strong></p>
+            <p>Descuento aplicado: <strong id="total-descuento">$0</strong></p>
+            <p>Total final: <strong id="total-final">$0</strong></p>
+            <p class="nota">Mostramos siempre el mejor descuento por producto (50% en el segundo o 3x2) y luego el extra del 10% si supera los $30.000.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>(c) 2025 Local Nova</p>
+      </div>
+    </footer>
+  </body>
+  </html>
+
+
+
+
